@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <h1>Home</h1>
+    <hr>
+    <router-link to="/">Home</router-link>
+    <hr>
     <router-view/>
   </div>
 </template>
@@ -24,6 +28,10 @@ export default {
   background: #fff;
   padding: 2rem;
 }
+nav{
+  color: blue;
+}
+
 body, html {
   background: #666;
   margin: 0;
