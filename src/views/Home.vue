@@ -9,25 +9,25 @@
         v-show="showError"
       >Please check the information you have entered. Be sure to fill in all the fields.</p>
       <form v-on:submit.prevent="validateForm">
-        
         <p>
-          <label for="username">Username
+          <label for="username">
+            Username
             <input type="text" id="username" v-model="username">
           </label>
         </p>
-        
+
         <p>
           <label for="email">
             Email
             <input type="email" id="email" v-model="email">
           </label>
         </p>
-      
+
         <label for="password">
           Password
           <input type="password" id="password" v-model="password">
         </label>
-        
+
         <p>
           <label for="passwordVerify">
             Verify Password
@@ -66,10 +66,10 @@ export default {
   methods: {
     validateForm: function() {
       if (
-        (this.username !== '') &&
-        (this.email !== '') &&
-        (this.password != '') &&
-        (this.password === this.passwordVerify)
+        this.username !== "" &&
+        this.email !== "" &&
+        this.password != "" &&
+        this.password === this.passwordVerify
       ) {
         this.showForm = false;
       } else {
@@ -90,7 +90,7 @@ export default {
 h1,
 h2 {
   font-weight: normal;
-  color:blue;
+  color: blue;
 }
 
 ul {
